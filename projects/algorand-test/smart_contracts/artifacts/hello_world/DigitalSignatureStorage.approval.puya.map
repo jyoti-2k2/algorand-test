@@ -1,0 +1,849 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/pawan/algorand-test/projects/algorand-test/smart_contracts/hello_world/contract.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAMS;AACS;AAFhB;AAOO;AACS;AAFhB;AATF;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;AAAA;;AAsCE;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAVA;;AAAA;AAAA;AAAA;;AAAA;AApBF;;;AAAA;;;AAAA;;;AAAA;;;AAoBE;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AApBF;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAoBE;;;AAVO;AAWL;;AAAA;AAjBK;AAkBL;;AAAA;AACA;;AAAA;AAnBK;AAAA;AAAA;AAAA;AA2BL;AArBK;AAAA;AAAA;AAAA;AA6BL",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0"
+    },
+    "5": {
+      "op": "bytecblock \"signature\" \"signer\" 0x151f7c75 \"\""
+    },
+    "30": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "reinterpret_bool%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bool%0#0"
+      ]
+    },
+    "32": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "35": {
+      "op": "bytec_0 // \"signature\"",
+      "defined_out": [
+        "\"signature\""
+      ],
+      "stack_out": [
+        "\"signature\""
+      ]
+    },
+    "36": {
+      "op": "bytec_3 // \"\"",
+      "defined_out": [
+        "\"\"",
+        "\"signature\""
+      ],
+      "stack_out": [
+        "\"signature\"",
+        "\"\""
+      ]
+    },
+    "37": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "38": {
+      "op": "bytec_1 // \"signer\"",
+      "defined_out": [
+        "\"signer\""
+      ],
+      "stack_out": [
+        "\"signer\""
+      ]
+    },
+    "39": {
+      "op": "bytec_3 // \"\"",
+      "stack_out": [
+        "\"signer\"",
+        "\"\""
+      ]
+    },
+    "40": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "41": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "43": {
+      "op": "bz main_bare_routing@10",
+      "stack_out": []
+    },
+    "46": {
+      "op": "pushbytess 0x0e64b044 0xfd6885f6 0xb77119b7 // method \"storeSignature(string,string)string\", method \"getSignature()string\", method \"getSigner()string\"",
+      "defined_out": [
+        "Method(getSignature()string)",
+        "Method(getSigner()string)",
+        "Method(storeSignature(string,string)string)"
+      ],
+      "stack_out": [
+        "Method(storeSignature(string,string)string)",
+        "Method(getSignature()string)",
+        "Method(getSigner()string)"
+      ]
+    },
+    "63": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(getSignature()string)",
+        "Method(getSigner()string)",
+        "Method(storeSignature(string,string)string)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(storeSignature(string,string)string)",
+        "Method(getSignature()string)",
+        "Method(getSigner()string)",
+        "tmp%2#0"
+      ]
+    },
+    "66": {
+      "op": "match main_storeSignature_route@5 main_getSignature_route@6 main_getSigner_route@7",
+      "stack_out": []
+    },
+    "74": {
+      "block": "main_after_if_else@14",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "75": {
+      "op": "return",
+      "stack_out": []
+    },
+    "76": {
+      "block": "main_getSigner_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "78": {
+      "op": "!",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "79": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "80": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "82": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "83": {
+      "callsub": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.getSigner",
+      "op": "callsub getSigner",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "86": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "to_encode%2#0 (copy)"
+      ]
+    },
+    "87": {
+      "op": "len",
+      "defined_out": [
+        "length%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length%2#0"
+      ]
+    },
+    "88": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "as_bytes%2#0"
+      ]
+    },
+    "89": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0",
+        "length_uint16%2#0"
+      ]
+    },
+    "92": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%2#0",
+        "to_encode%2#0"
+      ]
+    },
+    "93": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0"
+      ]
+    },
+    "94": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ],
+      "stack_out": [
+        "encoded_value%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "95": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%2#0"
+      ]
+    },
+    "96": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "97": {
+      "op": "log",
+      "stack_out": []
+    },
+    "98": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "99": {
+      "op": "return",
+      "stack_out": []
+    },
+    "100": {
+      "block": "main_getSignature_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "102": {
+      "op": "!",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "103": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "104": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "106": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "107": {
+      "callsub": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.getSignature",
+      "op": "callsub getSignature",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "110": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "to_encode%1#0 (copy)"
+      ]
+    },
+    "111": {
+      "op": "len",
+      "defined_out": [
+        "length%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length%1#0"
+      ]
+    },
+    "112": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "as_bytes%1#0"
+      ]
+    },
+    "113": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0",
+        "length_uint16%1#0"
+      ]
+    },
+    "116": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%1#0",
+        "to_encode%1#0"
+      ]
+    },
+    "117": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0"
+      ]
+    },
+    "118": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ],
+      "stack_out": [
+        "encoded_value%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "119": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%1#0"
+      ]
+    },
+    "120": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "121": {
+      "op": "log",
+      "stack_out": []
+    },
+    "122": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "123": {
+      "op": "return",
+      "stack_out": []
+    },
+    "124": {
+      "block": "main_storeSignature_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "126": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "127": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "128": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "130": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "131": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "134": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "137": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "140": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "143": {
+      "callsub": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.storeSignature",
+      "op": "callsub storeSignature",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "146": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "147": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "148": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "149": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "152": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "153": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "154": {
+      "op": "bytec_2 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "155": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "156": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "157": {
+      "op": "log",
+      "stack_out": []
+    },
+    "158": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "159": {
+      "op": "return",
+      "stack_out": []
+    },
+    "160": {
+      "block": "main_bare_routing@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "162": {
+      "op": "bnz main_after_if_else@14",
+      "stack_out": []
+    },
+    "165": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "167": {
+      "op": "!",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "168": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "169": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "170": {
+      "op": "return",
+      "stack_out": []
+    },
+    "171": {
+      "subroutine": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.storeSignature",
+      "params": {
+        "signerAddress#0": "bytes",
+        "signatureData#0": "bytes"
+      },
+      "block": "storeSignature",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "174": {
+      "op": "bytec_1 // \"signer\"",
+      "defined_out": [
+        "\"signer\""
+      ],
+      "stack_out": [
+        "\"signer\""
+      ]
+    },
+    "175": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"signer\"",
+        "signerAddress#0 (copy)"
+      ],
+      "stack_out": [
+        "\"signer\"",
+        "signerAddress#0 (copy)"
+      ]
+    },
+    "177": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "178": {
+      "op": "bytec_0 // \"signature\"",
+      "defined_out": [
+        "\"signature\""
+      ],
+      "stack_out": [
+        "\"signature\""
+      ]
+    },
+    "179": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"signature\"",
+        "signatureData#0 (copy)"
+      ],
+      "stack_out": [
+        "\"signature\"",
+        "signatureData#0 (copy)"
+      ]
+    },
+    "181": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "182": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "signatureData#0 (copy)"
+      ]
+    },
+    "184": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "185": {
+      "subroutine": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.getSignature",
+      "params": {},
+      "block": "getSignature",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "186": {
+      "op": "bytec_0 // \"signature\"",
+      "defined_out": [
+        "\"signature\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"signature\""
+      ]
+    },
+    "187": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "188": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "189": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "190": {
+      "subroutine": "smart_contracts/hello_world/contract.algo.ts::DigitalSignatureStorage.getSigner",
+      "params": {},
+      "block": "getSigner",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "191": {
+      "op": "bytec_1 // \"signer\"",
+      "defined_out": [
+        "\"signer\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"signer\""
+      ]
+    },
+    "192": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "193": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "194": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

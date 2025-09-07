@@ -1,22 +1,79 @@
-# algorand-test
 
-Welcome to your new AlgoKit project!
+# 📝 Digital Signature Storage dApp (Algorand + TypeScript)
+<img width="1600" height="784" alt="image" src="https://github.com/user-attachments/assets/7c750d79-a999-4b5c-925b-2eeb2389bf99" />
+https://lora.algokit.io/testnet/application/745508235
 
-This is your workspace root. A `workspace` in AlgoKit is an orchestrated collection of standalone projects (backends, smart contracts, frontend apps and etc).
 
-By default, `projects_root_path` parameter is set to `projects`. Which instructs AlgoKit CLI to create a new directory under `projects` directory when new project is instantiated via `algokit init` at the root of the workspace.
+## 📌 Project Description
+**DigitalSignatureStorage** is a decentralized application (dApp) built on the Algorand blockchain using **TypeScript smart contracts**.  
+It allows users to **securely store and retrieve digital signatures** (for example, hashes of important documents) along with the signer’s wallet address.  
 
-## Getting Started
+This ensures authenticity, immutability, and easy verification of digital assets without relying on centralized databases.
 
-To get started refer to `README.md` files in respective sub-projects in the `projects` directory.
+---
 
-To learn more about algokit, visit [documentation](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/algokit.md).
+## 🚀 What it does
+- Users can **store a digital signature** along with their wallet address.  
+- Anyone can **retrieve the stored signature** and the associated signer address at any time.  
+- Ensures **tamper-proof storage** by leveraging Algorand’s global state.
 
-### GitHub Codespaces
+---
 
-To get started execute:
+## ✨ Features
+- ✅ Store a **digital signature** on-chain  
+- ✅ Save the **signer’s Algorand address**  
+- ✅ Retrieve the **stored signature**  
+- ✅ Retrieve the **signer’s address**  
+- ✅ Beginner-friendly, lightweight smart contract (TypeScript)  
 
-1. `algokit generate devcontainer` - invoking this command from the root of this repository will create a `devcontainer.json` file with all the configuration needed to run this project in a GitHub codespace. [Run the repository inside a codespace](https://docs.github.com/en/codespaces/getting-started/quickstart) to get started.
-2. `algokit init` - invoke this command inside a github codespace to launch an interactive wizard to guide you through the process of creating a new AlgoKit project
+---
 
-Powered by [Copier templates](https://copier.readthedocs.io/en/stable/).
+## 📄 Smart Contract Code
+```typescript
+//paste your code
+````
+
+---
+
+## 🌍 Deployed Smart Contract
+
+👉 [Smart Contract Link](XXX)
+
+---
+
+## 🛠️ Tech Stack
+
+* **Algorand Blockchain**
+* **TypeScript**
+* **Algorand Foundation SDK**
+
+---
+
+## 📚 How it Works
+
+1. **User signs a document off-chain** (producing a hash/digital signature).
+2. **Smart contract stores** the hash + signer’s wallet address.
+3. **Anyone can query** the contract to verify the signature and signer.
+
+---
+
+## 🎯 Use Cases
+
+* 🔐 Document verification
+* 🏦 Legal agreements
+* 🎨 Digital art authenticity
+* 🧾 Certificate validation
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repo, submit issues, and create pull requests.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+
